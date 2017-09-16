@@ -1,9 +1,9 @@
 # Geo Location App
-ReactJS & Redux
+ReactJS, Redux and LeafletJS Geo location App.
 
 ## Live demo
 
-  https://geo-location-app-gfnazysbdc.now.sh
+  https://geo-location-app-iqaswpygfr.now.sh
 
 ## Getting Started
 Task | Description
@@ -24,7 +24,6 @@ You can use `yarn` too.
 - Export to GeoJSON, with copy to clipbload.
 - Move and scale the map.
 - Additional feature: Add locations by click on the map.
-- Additional Roads map layer.
 - Locations popup details.
 
 

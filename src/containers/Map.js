@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Map, Marker, Popup, TileLayer, ZoomControl, GeoJSON, LayersControl, Circle } from 'react-leaflet'
+import { Map, Marker, Popup, TileLayer, ZoomControl, GeoJSON, Circle } from 'react-leaflet'
 import { connect } from 'react-redux'
 import uuid from 'uuid/v1'
 
@@ -12,10 +12,9 @@ delete L.Icon.Default.prototype._getIconUrl
 L.Icon.Default.mergeOptions({
   iconSize: [45, 45],
   iconAnchor: [22, 45],
-  // iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-  // iconUrl: require('leaflet/dist/images/marker-icon.png'),
-  iconUrl: require('../images/pin.png')
-  // shadowUrl: require('leaflet/dist/images/marker-shadow.png')
+  iconUrl: require('../images/pin.png'),
+  iconRetinaUrl: require('../images/pin-2x.png'),
+  shadowUrl: require('../images/pin-shadow.png')
 })
 
 class AppMap extends Component {
@@ -113,27 +112,11 @@ class AppMap extends Component {
             />
           )
         }
-
-        <LayersControl position='topright'>
-          <LayersControl.BaseLayer name='Roads'>
-            <TileLayer
-              attribution=''
-              url='https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}'
-            />
-          </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name='OpenStreetMap.Mapnik'>
-            <TileLayer
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-            />
-          </LayersControl.BaseLayer>
-        </LayersControl>
-
-        <GeoJSON data={geoJsonData} />
         <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
+          url='https://a.tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
+        <GeoJSON data={geoJsonData} />
         {
           geoJsonData.features.map((marker, idx) =>
             <Marker key={`marker-${idx}`} position={marker.properties.latLng}>
