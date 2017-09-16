@@ -3,7 +3,7 @@ ReactJS & Redux
 
 ## Live demo
 
-  https://geo-location-app-smhraxpcdh.now.sh/
+  https://geo-location-app-gfnazysbdc.now.sh
 
 ## Getting Started
 Task | Description
@@ -16,9 +16,9 @@ You can use `yarn` too.
 
 ## Features
 - Auto complete search.
-- Radius Slider shows after selecting a location.
 - Add & Delete unlimited number of locations.
 - List of current locations and button to display each one.
+- Radius Slider displayed after selecting a location.
 - Add & Save Locations (local-storage).
 - Inputs Validation, with min & max radius.
 - Export to GeoJSON, with copy to clipbload.
@@ -64,6 +64,7 @@ Settings | to enable additional feature.
 ## Technologies
 - ReactJS
 - Redux
+- LeafletJS
 - Webpack
 - ES6
 - SASS

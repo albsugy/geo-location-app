@@ -215,7 +215,8 @@ class App extends Component {
   handleViewResurantLocation (lat, lng) {
     this.setState({
       lat,
-      lng
+      lng,
+      zoom: 13
     })
   }
   handleOnMapMoveEnd (map) {
