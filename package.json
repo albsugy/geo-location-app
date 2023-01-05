@@ -17,7 +17,7 @@
     "react-places-autocomplete": "^5.4.3",
     "react-rangeslider": "^2.1.0",
     "react-redux": "^5.0.6",
-    "react-scripts": "1.0.13",
+    "react-scripts": "5.0.1",
     "redux": "^3.7.2",
     "uuid": "^3.1.0"
   },
@@ -39,7 +39,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.3.0",
     "eslint-plugin-standard": "^3.0.1",
-    "jest": "^21.0.2",
+    "jest": "^29.3.1",
     "react-addons-test-utils": "^15.6.0",
     "react-test-renderer": "^15.6.1"
   }
